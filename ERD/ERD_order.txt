@@ -1,0 +1,36 @@
+Entity-Relationship Diagram (ERD)
+
+Based on the client's requirements, the ERD for the material registration module in Odoo 14 is as follows:
+Entities and Attributes
+
+    Material
+        Material ID (Primary Key)
+        Material Code (String)
+        Material Name (String)
+        Material Type (Selection: 'Fabric', 'Jeans', 'Cotton')
+        Material Buy Price (Float)
+        Supplier ID (Foreign Key)
+
+    Supplier
+        Supplier ID (Primary Key)
+        Supplier Name (String)
+
+Relationships
+
+    A Material is supplied by one Supplier.
+    A Supplier can supply many Materials.
+
+ERD Diagram
+
+plaintext
+
++------------------+          +------------------+
+|     Material     |          |     Supplier     |
++------------------+          +------------------+
+| Material_ID (PK) | 1      * | Supplier_ID (PK) |
+| Material_Code    |----------| Supplier_Name    |
+| Material_Name    |          +------------------+
+| Material_Type    |
+| Material_Buy_Price|
+| Supplier_ID (FK) |
++------------------+
