@@ -18,11 +18,9 @@ class MaterialController(http.Controller):
             'material_buy_price': kwargs.get('material_buy_price'),
             'supplier_id': kwargs.get('supplier_id')
         })
-        # param_branch_id = request.params.get('branch_id')
         
         # Log the created material
         _logger.info('Created material: %s', material)
-        print("+++++++++++++", kwargs.get('material_code'))
 
         return {'material_id': material.id}
 

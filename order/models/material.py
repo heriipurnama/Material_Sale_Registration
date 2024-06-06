@@ -15,12 +15,8 @@ class Material(models.Model):
     material_buy_price = fields.Float(string='Material Buy Price')
     supplier_id = fields.Many2one('res.partner', string='Related Supplier')
     
-    # @api.constrains('material_buy_price')
-    # def _check_material_buy_price(self):
-    #     for record in self:
-    #         print("==================" , record)
-    #         print("==================" , record.material_buy_price)
-    #         print("==================" , record.material_type)
-
-    #         if record.material_buy_price < 100:
-    #             raise ValidationError('Material buy price cannot be less than 100.')
+    @api.constrains('material_buy_price')
+    def _check_material_buy_price(self):
+        for record in self:
+            if record.material_buy_price < 100:
+                raise ValidationError('Material buy price cannot be less than 100.')
