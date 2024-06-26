@@ -1,4 +1,3 @@
-```markdown
 # Material Sale Registration Module for Odoo 14
 
 This Odoo module allows users to manage materials for sale, including the creation, updating, and deletion of materials. It includes features such as material registration, supplier association, and filtering by material type.
