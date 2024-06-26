@@ -33,7 +33,7 @@ This Odoo module allows users to manage materials for sale, including the creati
     - Go to the Odoo web interface.
     - Navigate to `Apps`.
     - Click on the `Update Apps List` button.
-    - Search for `Material Sale Registration` and click `Install`.
+    - Search for `order` and click `Install`.
 
 ## Usage
 
